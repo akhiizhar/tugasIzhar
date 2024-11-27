@@ -9,13 +9,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cyborg/bootstrap.min.css"
     integrity="sha384-nEnU7Ae+3lD52AK+RGNzgieBWMnEfgTbRHIwEvp1XXPdqdO6uLTd/NwXbzboqjc2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <title>Data Gudang</title>
+  <title>Data gudang</title>
 </head>
 
 <body>
-  <!-- Dashboard Include -->
-  <?php include 'dashboard.php'; ?>
-
   <div class="container mt-5">
     <div class="row mb-4">
       <div class="col">
@@ -38,7 +35,7 @@
             </thead>
             <tbody>
               <?php
-              require './config/db.php';
+              require './../config/db.php';
 
               $products = mysqli_query($db_connect, "SELECT * FROM products");
               $no = 1;
